@@ -7,7 +7,7 @@ const REMOVE = 'todos/REMOVE'; //삭제
 //액션 함수 :dispatch시에 실행될 type과 필요한 값
 export const changeInput = (input) => ({
     type:CHANGE_INPUT,
-    input
+    input,
 })
 let id = 3 //사용자가 입력하는 값이 아닌 자동으로 바뀌는값
 export const insert =  (text) =>({
@@ -22,7 +22,7 @@ export const insert =  (text) =>({
 
 
 export const toggle = (id) =>({
-    Type : TOGGLE,
+    type : TOGGLE,
     id,
 })
 
@@ -50,7 +50,7 @@ const  initalState = {
 
 //리듀서 함수를 통해 수정
 function todos(state= initalState,action) {
-    switch(action.type) {
+    switch (action.type) {
         case CHANGE_INPUT:
             return{
                 ...state,
@@ -59,7 +59,7 @@ function todos(state= initalState,action) {
             case INSERT:
                 return {
                     ...state,
-                    todos: state.todos.concat(action.todo)
+                    todos: state.todos.concat(action.todo),
                 };
                 case TOGGLE:
                     return{
@@ -72,12 +72,11 @@ function todos(state= initalState,action) {
                     return { 
                         ...state,
                         todos : state.todos.filter(
-                            (todo) => todo.id !== action.id
-                        )
+                            (todo) => todo.id !== action.id),
                     }
-                    default :
-                    return state
+                    default:
+                    return state;
                 }
 }
 
-export default todos
+export default todos;

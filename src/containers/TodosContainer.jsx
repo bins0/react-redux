@@ -1,7 +1,7 @@
 //Todos 컴포넌트와 리덕스 모듈연결
 import { connect }  from "react-redux";
-import Todos from '../components/Todos'
-import { changeInput,insert,toggle,remove } from '../modules/todos'
+import Todos from '../components/Todos';
+import { changeInput,insert,toggle,remove } from '../modules/todos';
 const TodosContainer = ({
     input,
     todos,
