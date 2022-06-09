@@ -5,8 +5,7 @@
     2.Context API를 이용하여 전역적으로 사용 : useContext()이용하여 값 가져옴
     3.리덕스를 이용하여 상태관리하여 사용 : props을 통해 값가져옴
 */
-
-export const Counter = ({number, onIncrease,onDecrease}) => {
+const Counter = ({number, onIncrease,onDecrease}) => {
     return(
         <div>
             <h1>{number}</h1>
@@ -18,4 +17,5 @@ export const Counter = ({number, onIncrease,onDecrease}) => {
     )
 }
 
+export default Counter
  

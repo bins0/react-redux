@@ -1,6 +1,6 @@
 //Counter 컴폰너트와 리덕스를 CouterContainer에서 연결 
 import { connect } from 'react-redux';
-import { Counter } from '../components/Counter'
+import  Counter  from '../components/Counter'
 import { decrease, increase } from '../modules/counter';
 
 //호출했을때 보이는 컴포넌트 : Counter-props 값을 받아서 화면 출력
@@ -25,7 +25,7 @@ const mapDispatchProps = dispatch => ({
 export default connect(mapStateToProps,mapDispatchProps)(CounterContainer);
 */
 export default connect(
-  state=> ({
+  (state)=> ({
     number:state.counter.number
   }),
   {
