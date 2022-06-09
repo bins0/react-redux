@@ -12,7 +12,7 @@ export const decrease =() =>({ type: DECREASE})
 
 //초기 상태 
 const initalState = {
-    number : 0
+    number : 0,
 
 };
 
