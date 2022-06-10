@@ -34,7 +34,7 @@ export const remove = (id) =>({
 //초기 state
 const  initalState = {
     input : "",
-    toods : [
+    todos : [
         {
             id: 1,
             text:'첫번쨰 할일입니다',

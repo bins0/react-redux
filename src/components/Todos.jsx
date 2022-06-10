@@ -47,7 +47,7 @@ const Todos = ({
         <input type="text" value={input} onChange={onChange} />
         <button type="submit">등록</button>
       </form>
-      {todos && todos.map((todo) => (
+      {todos.map((todo) => (
         <TodoItem todo={todo} key={todo.id} onToggle={onToggle} onRemove={onRemove} />
       ))}
     </div>
