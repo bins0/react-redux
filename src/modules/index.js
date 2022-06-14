@@ -6,9 +6,13 @@ import {combineReducers} from 'redux'
 //작성한 리덕스 모듈을 가져옴
 import counter from './counter'
 import  todos   from "./todos";
+import  counterAsyc  from "./counterAsyc";
+import { newsapi } from "./newapi";
 const rootReducer = combineReducers({
     counter,
+    counterAsyc,
     todos,
+    newsapi,
 });
 
 export default rootReducer;
