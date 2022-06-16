@@ -18,7 +18,7 @@ export const increaseAsyc = () => (dispatch) => {
   setTimeout(() => {dispatch(increase())}, 1000)
 } 
 //비동기함수  Thunk생성함수 : 함수를 한번감싸서 내보내줌
-export const DecreaseAsyc = () => (dispatch) => {
+export const decreaseAsyc = () => (dispatch) => {
   setTimeout(() => {dispatch(decrease())}, 1000)
 } 
 

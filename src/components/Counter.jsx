@@ -12,6 +12,7 @@
         <div>
           <button onClick={onDecrease}>-</button>
           <button onClick={onIncrease}>+</button>
+          
         </div>
       </div>
     );
