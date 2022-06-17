@@ -4,7 +4,7 @@
 //store : 리덕스에서 가져온 store(state와 dispatch)
 //action : dispatch된 액션
 //next : dispatch 로 넘겨주는 역할
-const loggerMiddleware = store => next => action => {
+const loggerMiddleware = (store) => (next) => (action) => {
     //미들웨어의 기본구조 
     //액션의 상태를 남기는 logger
     console.group(action && action.type) //group하면 라벨처럼됨

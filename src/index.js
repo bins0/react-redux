@@ -10,13 +10,17 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import rootReducer from "./modules";
+import rootReducer, { rootSaga } from "./modules";
 //import { loggerMiddleware } from "./lib/loggerMiddleware";
 import { createLogger } from "redux-logger";//logger로 재할당
 import  ReduxThunk   from "redux-thunk";
-
+import createSagaMiddleware from '@redux-saga/core'
 const logger = createLogger();
-const store = createStore(rootReducer, applyMiddleware(logger, ReduxThunk));//store로 rootReducer가져옴
+const sagaMiddleware  = createSagaMiddleware()
+const store = createStore(
+  rootReducer,
+   applyMiddleware(logger, ReduxThunk,sagaMiddleware)); 
+   sagaMiddleware.run(rootSaga);//store로 rootReducer가져옴
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
